@@ -1,0 +1,131 @@
+<!-- Sección de Categorías / Tipos de Animales Estilo Animalia.bio (Todo en HTML) -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    
+    <!-- Título de la Sección -->
+    <h1 class="fw-bold mb-2 text-success-dark">Explorá el Reino Animal</h1>
+    <p class="text-muted mb-5">Descubrí las diferentes especies según su grupo taxonómico</p>
+
+    <!-- Grilla de Círculos en Zigzag -->
+    <div class="row g-4 justify-content-center align-items-center">
+      
+      <!-- Categoría: Mamíferos (Arriba) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'mamiferos'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/mamiferos.jpg" alt="Mamíferos" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Mamíferos</h6>
+        </a>
+      </div>
+
+      <!-- Categoría: Aves (Abajo - Zigzag) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item zigzag-down">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'aves'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/aves.jpg" alt="Aves" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Aves</h6>
+        </a>
+      </div>
+
+      <!-- Categoría: Reptiles (Arriba) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'reptiles'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/reptiles.jpg" alt="Reptiles" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Reptiles</h6>
+        </a>
+      </div>
+
+      <!-- Categoría: Anfibios (Abajo - Zigzag) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item zigzag-down">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'anfibios'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/anfibio.jpg" alt="Anfibios" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Anfibios</h6>
+        </a>
+      </div>
+
+      <!-- Categoría: Peces (Arriba) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'peces'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/pes.jpg" alt="Peces" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Peces</h6>
+        </a>
+      </div>
+
+      <!-- Categoría: Invertebrados (Abajo - Zigzag) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 animal-item zigzag-down">
+        <a [routerLink]="['/productos']" [queryParams]="{tipo: 'invertebrados'}" class="animal-circle-link">
+          <div class="animal-circle shadow-sm mx-auto mb-3">
+            <img src="img/invertebrado.jpg" alt="Invertebrados" class="animal-img">
+          </div>
+          <h6 class="animal-name fw-semibold">Invertebrados</h6>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Estilos integrados directamente para que no tengas que crear archivos extra -->
+<style>
+  .text-success-dark {
+    color: #2E4A36 !important;
+  }
+
+  .animal-circle-link {
+    text-decoration: none !important;
+    display: inline-block;
+  }
+
+  .animal-circle {
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #E8F5E9;
+    background-color: #F8F9FA;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .animal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .animal-name {
+    color: #4E6E58;
+    transition: color 0.3s ease;
+    font-size: 1.05rem;
+  }
+
+  /* Efecto Zigzag Horizontal */
+  @media (min-width: 768px) {
+    .zigzag-down {
+      transform: translateY(45px);
+    }
+  }
+
+  /* Efectos Hover */
+  .animal-circle-link:hover .animal-circle {
+    transform: translateY(-5px);
+    border-color: #A0C49D;
+    box-shadow: 0px 8px 15px rgba(46, 74, 54, 0.15) !important;
+  }
+
+  .animal-circle-link:hover .animal-img {
+    transform: scale(1.1);
+  }
+
+  .animal-circle-link:hover .animal-name {
+    color: #2E4A36;
+  }
+</style>

@@ -1,0 +1,123 @@
+<!-- Footer con fondo verde pastel y línea divisoria sutil -->
+<footer class="custom-footer pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+
+      <!-- Columna 1: Marca y descripción breve -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <a class="footer-brand fw-bold text-success d-flex align-items-center justify-content-center justify-content-md-start mb-3" href="#" style="letter-spacing: 0.5px; text-decoration: none;">
+          <span class="me-2 fs-4">🐾</span> ANIMALIA
+        </a>
+        <p class="footer-text small">
+          Dedicados a la divulgación, conocimiento y protección de las especies y sus hábitats naturales. Un espacio para conectar con la vida silvestre.
+        </p>
+      </div>
+
+      <!-- Columna 2: Navegación rápida (Mismos enlaces que la Navbar) -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-3 fw-bold footer-title">Explorar</h6>
+        <p><a href="#" [routerLink]="['/inicio']" class="footer-link small">Inicio</a></p>
+        <p><a href="#" [routerLink]="['/productos']" class="footer-link small">Especies</a></p>
+        <p><a href="#" [routerLink]="['/nosotros']" class="footer-link small">Hábitats</a></p>
+        <p><a href="#" [routerLink]="['/contacto']" class="footer-link small">Conservación</a></p>
+      </div>
+
+      <!-- Columna 3: Información de contacto ficticia -->
+      <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-3 fw-bold footer-title">Contacto</h6>
+        <p class="footer-text small d-flex align-items-center justify-content-center justify-content-md-start">
+          <span class="me-2">📍</span> Cipolletti, Río Negro
+        </p>
+        <p class="footer-text small d-flex align-items-center justify-content-center justify-content-md-start">
+          <span class="me-2">✉️</span> info@animalia.com
+        </p>
+        <p class="footer-text small d-flex align-items-center justify-content-center justify-content-md-start">
+          <span class="me-2">📞</span> +54 299 676-767
+        </p>
+      </div>
+
+      <!-- Columna 4: Redes Sociales -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-center">
+        <h6 class="text-uppercase mb-3 fw-bold footer-title">Seguinos</h6>
+        <div class="d-flex justify-content-center gap-2">
+          <a href="#" class="btn btn-social d-flex align-items-center justify-content-center">🐦</a>
+          <a href="#" class="btn btn-social d-flex align-items-center justify-content-center">📸</a>
+          <a href="#" class="btn btn-social d-flex align-items-center justify-content-center">📘</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4 footer-divider">
+
+    <!-- Fila de Copyright -->
+    <div class="row align-items-center">
+      <div class="col-md-12 text-center">
+        <p class="footer-copyright small mb-0">
+          © 2026 <strong>Animalia</strong>. Creado con amor por la naturaleza.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- 💡 Agregá este bloque CSS en tu archivo de estilos global (styles.css) -->
+<style>
+  /* Fondo general del footer: Verde Menta Pastel coincidiendo con la Navbar */
+  .custom-footer {
+    background-color: #E8F5E9 !important;
+    border-top: 2px solid #C8E6C9; /* Línea divisoria superior */
+  }
+
+  /* Títulos de las secciones */
+  .footer-title {
+    color: #2E4A36 !important; /* Verde oscuro orgánico */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* Textos informativos generales */
+  .footer-text {
+    color: #4E6E58 !important; /* Verde seco */
+  }
+
+  /* Enlaces con transición suave */
+  .footer-link {
+    color: #4E6E58 !important;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .footer-link:hover {
+    color: #2E4A36 !important; /* Oscurece al pasar el mouse */
+    text-decoration: underline;
+  }
+
+  /* Línea horizontal interna */
+  .footer-divider {
+    border-top: 1px solid #C8E6C9;
+    opacity: 1;
+  }
+
+  /* Créditos finales */
+  .footer-copyright {
+    color: #7A9A83 !important;
+  }
+
+  /* Botones redondos de Redes Sociales (Verde Salvia) */
+  .btn-social {
+    background-color: #A0C49D !important; /* Mismo color que el botón buscar */
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    transition: background-color 0.2s, transform 0.2s;
+    font-size: 1.1rem;
+    padding: 0;
+  }
+
+  .btn-social:hover {
+    background-color: #8CA989 !important;
+    transform: translateY(-2px); /* Pequeño salto animado */
+  }
+</style>
